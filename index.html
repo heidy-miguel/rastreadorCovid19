@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Rastreado do Covid-19</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Heidy Miguel</a>
+
+          <!-- select para o usuário selecionar o país desejado -->
+          <select class="custom-select d-block w-100" id="country" required onchange="chart()">
+            <option value="" >Escolhe...</option>
+          </select>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" class="col-md-12 ml-sm-auto col-lg-12 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+
+            <!-- h1 para apresentar o nome do país selecionado pelo usuário -->
+            <h1 class="h2" id="countryName">Nome do País</h1>
+          </div>
+          
+          <!-- canvas onde será apresentado o gráfico com os dados do país selecionado -->
+          <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+          
+          <h2>Países</h2>
+
+          <!-- div onde será inserido a tabela com a lista de todos os países com os respectivos dados mais recentes -->
+          <div class="table-responsive">
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  </body>
+</html>
